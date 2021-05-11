@@ -1,0 +1,17 @@
+{
+  "name": "nano-express",
+  "description": "Smallest express webserver codebase to run several tests.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/thilllon/nano-express.git",
+  "author": "thilllon <thilllon970@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "multi": "mkdir server && cp package.json index.js yarn.lock .gitignore ./server && mkdir server2 && cp package.json index.js yarn.lock .gitignore ./server2 && rm -rf package.json index.js yarn.lock .gitignore",
+    "back": "mv package.json index.js yarn.lock .gitignore .. && cd .. && rm -rf server"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
